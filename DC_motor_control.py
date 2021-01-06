@@ -4,9 +4,6 @@ Spyder Editor
 This is a temporary script file.
 """
 import time
-import scipy.linalg
-from control import lqr
-import numpy as np
 import RPi.GPIO as IO
 import matplotlib.pyplot as plt
 IO.setmode(IO.BCM)
@@ -17,11 +14,6 @@ IO.setup(6, IO.OUT)
 start = 0
 pwm = IO.PWM(5, 1000)
 pwm.start(start)
-
-curr= 0, 0
-t0 = time.time()
-
-
 prev_loss = 0.
 aloss = 0.
 
